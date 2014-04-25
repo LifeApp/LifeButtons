@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:weightSum = "3">
+    
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_width = "fill_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:weightSum = "3"
+        >    
+        <LinearLayout 
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            
+            <Button
+                android:id="@+id/scripts_button"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="@string/scripts" />
+            
+        </LinearLayout>
+        <LinearLayout 
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            
+        </LinearLayout>
+        <LinearLayout 
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            
+            <Button 
+                android:id="@+id/time_mgmt_button"
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent"
+                android:text="@string/time_mgmt"
+                android:gravity="center"/>            
+        </LinearLayout>                
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_height="0dp"
+        android:layout_width = "fill_parent"
+        android:orientation ="horizontal"
+        android:layout_weight = "1"
+        >
+	    <Button
+	        android:id="@+id/relationship_maint_button"
+	        android:layout_width="wrap_content"
+	        android:layout_height="fill_parent"
+	        android:text="@string/relationship_maint"
+	        android:gravity="left|center_vertical"
+	        android:layout_centerInParent="true" />        
+    
+
+    
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_width = "fill_parent"
+        android:orientation ="horizontal"
+        android:layout_weight = "1"
+        android:weightSum = "3"
+        >
+	    <LinearLayout 
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            
+            <Button 
+                android:id= "@+id/hygiene_button"
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent"
+                android:text = "@string/hygiene"
+	        	android:gravity="center"                />
+            
+        </LinearLayout>
+        <LinearLayout 
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            
+        </LinearLayout>
+        <LinearLayout 
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            
+            <Button 
+                android:id="@+id/emergency_info_button"
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent"
+                android:text = "@string/emergency_info"
+             	android:gravity="center"/>            
+        </LinearLayout>       
+    </LinearLayout>        
+</LinearLayout>
