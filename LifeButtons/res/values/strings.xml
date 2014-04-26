@@ -27,5 +27,8 @@
     <string name="sem_cal">Semester Calendar</string>
     <string name="title_activity_disagreements_menu">DisagreementsMenu</string>
     <string name="title_activity_time_management">TimeManagement</string>
+    <string name="title_activity_relationship_maintenance">RelationshipMaintenance</string>
+    <string name="spider_map">Spider Map</string>
+    <string name="social_rating">Social Rating</string>
 
 </resources>
