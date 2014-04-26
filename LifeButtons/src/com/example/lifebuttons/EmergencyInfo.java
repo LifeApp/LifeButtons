@@ -116,7 +116,7 @@ public class EmergencyInfo extends FragmentActivity {
 			case 1:
 				return getString(R.string.emergency_therapists).toUpperCase(l);
 			case 2:
-				return getString(R.string.emergency_financial).toUpperCase(l);
+				return getString(R.string.emergency_counselors).toUpperCase(l);
 			case 3:
 				return getString(R.string.emergency_dentists).toUpperCase(l);				
 			}
@@ -153,7 +153,7 @@ public class EmergencyInfo extends FragmentActivity {
 				tabs = R.layout.frag_emergency_therapists;
 				break;
 			case 2:
-				tabs = R.layout.frag_emergency_financial;
+				tabs = R.layout.frag_emergency_counselors;
 				break;
 			case 3:
 				tabs = R.layout.frag_emergency_dentists;
