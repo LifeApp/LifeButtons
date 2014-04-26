@@ -24,11 +24,8 @@
         </activity>
         <activity
             android:name="com.example.lifebuttons.ScriptsHome"
-            android:label="@string/title_activity_scripts_home" >
-        </activity>
-        <activity
-            android:name="com.example.lifebuttons.GreetingsHome"
-            android:label="@string/title_activity_greetings_home" >
+            android:label="@string/title_activity_scripts_home"
+            android:parentActivityName="com.example.lifebuttons.MainMenu" >
         </activity>
         <activity
             android:name="com.example.lifebuttons.GreetingsMenu"
