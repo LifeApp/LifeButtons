@@ -2,9 +2,7 @@ package com.example.lifebuttons;
 
 import java.util.Locale;
 
-import android.app.ActionBar;
-import android.app.FragmentTransaction;
-import android.app.ActionBar.Tab;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -18,10 +16,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-public class GreetingsMenu extends FragmentActivity {
+public class EmergencyInfo extends FragmentActivity {
 
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -31,7 +28,7 @@ public class GreetingsMenu extends FragmentActivity {
 	 * intensive, it may be best to switch to a
 	 * {@link android.support.v4.app.FragmentStatePagerAdapter}.
 	 */
-	CollectionPagerAdapter mCollectionPagerAdapter;
+	CollectionsPagerAdapter mCollectionsPagerAdapter;
 
 	/**
 	 * The {@link ViewPager} that will host the section contents.
@@ -41,39 +38,26 @@ public class GreetingsMenu extends FragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_greetings_menu);
+		setContentView(R.layout.activity_emergency_info);
 
 		// Show the Up button in the action bar.
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 
 		// Create the adapter that will return a fragment for each of the three
 		// primary sections of the app.
-		mCollectionPagerAdapter = new CollectionPagerAdapter(
+		mCollectionsPagerAdapter = new CollectionsPagerAdapter(
 				getSupportFragmentManager());
 
-		
 		// Set up the ViewPager with the sections adapter.
 		mViewPager = (ViewPager) findViewById(R.id.pager);
-		mViewPager.setAdapter(mCollectionPagerAdapter);
-		
-	    /*mViewPager.setOnPageChangeListener(
-	            new ViewPager.SimpleOnPageChangeListener() {
-	                @Override
-	                public void onPageSelected(int position) {
-	                    // When swiping between pages, select the
-	                    // corresponding tab.
-	                    getActionBar().setSelectedNavigationItem(position);
-	                }
-	            });
-	            */
-	            
+		mViewPager.setAdapter(mCollectionsPagerAdapter);
 
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.greetings_menu, menu);
+		getMenuInflater().inflate(R.menu.emergency_info, menu);
 		return true;
 	}
 
@@ -88,7 +72,8 @@ public class GreetingsMenu extends FragmentActivity {
 			//
 			// http://developer.android.com/design/patterns/navigation.html#up-vs-back
 			//
-			NavUtils.navigateUpFromSameTask(this);
+			Intent goHome = new Intent(this,MainMenu.class);
+			NavUtils.navigateUpTo(this,goHome);
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
@@ -98,12 +83,11 @@ public class GreetingsMenu extends FragmentActivity {
 	 * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
 	 * one of the sections/tabs/pages.
 	 */
-	public class CollectionPagerAdapter extends FragmentPagerAdapter {
-		
-		public CollectionPagerAdapter(FragmentManager fm) {
+	public class CollectionsPagerAdapter extends FragmentPagerAdapter {
+
+		public CollectionsPagerAdapter(FragmentManager fm) {
 			super(fm);
 		}
-
 
 		@Override
 		public Fragment getItem(int position) {
@@ -128,13 +112,13 @@ public class GreetingsMenu extends FragmentActivity {
 			Locale l = Locale.getDefault();
 			switch (position) {
 			case 0:
-				return getString(R.string.family).toUpperCase(l);
+				return getString(R.string.emergency_doctors).toUpperCase(l);
 			case 1:
-				return getString(R.string.friends).toUpperCase(l);
+				return getString(R.string.emergency_therapists).toUpperCase(l);
 			case 2:
-				return getString(R.string.new_people).toUpperCase(l);
+				return getString(R.string.emergency_financial).toUpperCase(l);
 			case 3:
-				return getString(R.string.professionals).toUpperCase(l);				
+				return getString(R.string.emergency_dentists).toUpperCase(l);				
 			}
 			return null;
 		}
@@ -157,28 +141,26 @@ public class GreetingsMenu extends FragmentActivity {
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
-			Bundle args = getArguments();
+			Bundle args = getArguments(); 
 			int position = args.getInt(ARG_OBJECT);
-			
 			int tabs = 0;
 			switch(position)
 			{
 			case 0:
-				tabs = R.layout.frag_greetings_family;
+				tabs = R.layout.frag_emergency_doctors;
 				break;
 			case 1:
-				tabs = R.layout.frag_greetings_friends;
+				tabs = R.layout.frag_emergency_therapists;
 				break;
 			case 2:
-				tabs = R.layout.frag_greetings_professionals;
+				tabs = R.layout.frag_emergency_financial;
 				break;
 			case 3:
-				tabs = R.layout.frag_greetings_new_people;
+				tabs = R.layout.frag_emergency_dentists;
 				break;
 			}
 			View rootView = inflater.inflate(
 					tabs, container, false);
-
 			return rootView;
 		}
 	}

@@ -34,6 +34,11 @@
     <string name="sample_hygiene">Sample Hygiene List</string>
     <string name="male_hygiene">Male Hygiene List</string>
     <string name="female_hygiene">Female Hygiene List</string>
-    <string name="my_hygiene_list">My Hygiene List</string>    
+    <string name="my_hygiene_list">My Hygiene List</string>
+    <string name="title_activity_emergency_info">EmergencyInfo</string>
+    <string name="emergency_doctors">Doctors</string>
+    <string name="emergency_dentists">Dentists</string>
+    <string name="emergency_therapists">Therapists</string>
+    <string name="emergency_financial">Financial</string>
 
 </resources>

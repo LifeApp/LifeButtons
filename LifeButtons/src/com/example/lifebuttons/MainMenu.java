@@ -26,6 +26,9 @@ public class MainMenu extends Activity implements OnClickListener {
 		
 		Button hygiene = (Button) findViewById(R.id.hygiene_button);
 		hygiene.setOnClickListener(this);
+		
+		Button emergency = (Button) findViewById(R.id.emergency_info_button);
+		emergency.setOnClickListener(this);
 				
 	}
 
@@ -56,6 +59,10 @@ public class MainMenu extends Activity implements OnClickListener {
 		case R.id.hygiene_button:
 			Intent goToHygiene = new Intent(this,HygieneMenu.class);
 			startActivity(goToHygiene);
+			break;
+		case R.id.emergency_info_button:
+			Intent goToEmergency = new Intent(this,EmergencyInfo.class);
+			startActivity(goToEmergency);
 			break;
 		default:
 			Intent goToScriptsTwo = new Intent(this,ScriptsHome.class);
