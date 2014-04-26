@@ -40,5 +40,10 @@
     <string name="emergency_dentists">Dentists</string>
     <string name="emergency_therapists">Therapists</string>
     <string name="emergency_financial">Financial</string>
+    <string name="title_activity_dos_and_donts">DosAndDonts</string>
+    <string name="asking_questions">Asking Questions</string>
+    <string name="active_listening">Active Listening</string>
+    <string name="volume">Volume</string>
+    <string name="content">Content</string>
 
 </resources>

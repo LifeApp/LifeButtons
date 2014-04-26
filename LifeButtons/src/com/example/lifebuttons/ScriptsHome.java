@@ -27,6 +27,9 @@ public class ScriptsHome extends Activity implements OnClickListener {
 		
 		Button disagree = (Button) findViewById(R.id.disagreements_button);
 		disagree.setOnClickListener(this);
+		
+		Button doDont = (Button) findViewById(R.id.dos_and_donts_button);
+		doDont.setOnClickListener(this);
 	}
 
 	@Override
@@ -70,6 +73,10 @@ public class ScriptsHome extends Activity implements OnClickListener {
 		case R.id.disagreements_button:
 			Intent goToDisagreementsHome = new Intent(this,DisagreementsMenu.class);
 			startActivity(goToDisagreementsHome);	
+			break;
+		case R.id.dos_and_donts_button:
+			Intent goToDoDont = new Intent(this, DosAndDonts.class);
+			startActivity(goToDoDont);
 			break;
 		
 		}

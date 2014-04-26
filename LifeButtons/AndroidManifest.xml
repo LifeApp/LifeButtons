@@ -82,6 +82,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.lifebuttons.MainMenu" />
         </activity>
+        <activity
+            android:name="com.example.lifebuttons.DosAndDonts"
+            android:label="@string/title_activity_dos_and_donts"
+            android:parentActivityName="com.example.lifebuttons.ScriptsHome" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.lifebuttons.ScriptsHome" />
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
