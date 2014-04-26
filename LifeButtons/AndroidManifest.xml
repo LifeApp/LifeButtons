@@ -53,11 +53,12 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.lifebuttons.ScriptsHome" />
-        </activity>
+        </activity>        
         <activity
             android:name="com.example.lifebuttons.TimeManagement"
             android:label="@string/title_activity_time_management" >
         </activity>
+        
     </application>
-
+    
 </manifest>

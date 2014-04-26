@@ -2,6 +2,7 @@ package com.example.lifebuttons;
 
 import java.util.Locale;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -39,6 +40,7 @@ public class TimeManagement extends FragmentActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_time_management);
 
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 		// Create the adapter that will return a fragment for each of the three
 		// primary sections of the app.
 		mCollectionsPagerAdapter = new CollectionsPagerAdapater(
@@ -57,6 +59,24 @@ public class TimeManagement extends FragmentActivity {
 		return true;
 	}
 
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			// This ID represents the Home or Up button. In the case of this
+			// activity, the Up button is shown. Use NavUtils to allow users
+			// to navigate up one level in the application structure. For
+			// more details, see the Navigation pattern on Android Design:
+			//
+			// http://developer.android.com/design/patterns/navigation.html#up-vs-back
+			//
+			Intent goHome = new Intent(this, MainMenu.class);
+			NavUtils.navigateUpTo(this, goHome);
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}	
 	/**
 	 * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
 	 * one of the sections/tabs/pages.

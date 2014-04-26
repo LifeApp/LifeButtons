@@ -15,11 +15,12 @@ public class MainMenu extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_menu);
 		
-		Button scriptsMenu = (Button) findViewById(R.id.scripts_button);
-		scriptsMenu.setOnClickListener(this);
+
 		
 		Button timeManagement = (Button) findViewById(R.id.time_mgmt_button);
 		timeManagement.setOnClickListener(this);
+		Button scriptsMenu = (Button) findViewById(R.id.scripts_button);
+		scriptsMenu.setOnClickListener(this);		
 	}
 
 	@Override
@@ -36,10 +37,19 @@ public class MainMenu extends Activity implements OnClickListener {
 		{
 		case R.id.scripts_button:
 			Intent goToScripts = new Intent(this,ScriptsHome.class);
+			goToScripts.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 			startActivity(goToScripts);
+			break;
 		case R.id.time_mgmt_button:
 			Intent goToTimeManagement = new Intent(this,TimeManagement.class);
+			goToTimeManagement.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 			startActivity(goToTimeManagement);
+			break;
+		default:
+			Intent goToScriptsTwo = new Intent(this,ScriptsHome.class);
+			goToScriptsTwo.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			startActivity(goToScriptsTwo);
+			break;
 		
 		}
 	

@@ -47,7 +47,8 @@ public class ScriptsHome extends Activity implements OnClickListener {
 			//
 			// http://developer.android.com/design/patterns/navigation.html#up-vs-back
 			//
-			NavUtils.navigateUpFromSameTask(this);
+			Intent goHome = new Intent(this,MainMenu.class);
+			NavUtils.navigateUpTo(this,goHome);
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
