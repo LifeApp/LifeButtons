@@ -21,6 +21,9 @@ public class ScriptsHome extends Activity implements OnClickListener {
 		
 		Button greet = (Button) findViewById(R.id.greetings_button);
 		greet.setOnClickListener(this);
+		
+		Button depart = (Button) findViewById(R.id.departures_button);
+		depart.setOnClickListener(this);
 	}
 
 	@Override
@@ -55,6 +58,9 @@ public class ScriptsHome extends Activity implements OnClickListener {
 		case R.id.greetings_button:
 			Intent goToGreetingsHome = new Intent(this,GreetingsMenu.class);
 			startActivity(goToGreetingsHome);
+		case R.id.departures_button:
+			Intent goToDeparturesHome = new Intent(this,DeparturesMenu.class);
+			startActivity(goToDeparturesHome);			
 		
 		}
 	

@@ -38,6 +38,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.lifebuttons.ScriptsHome" />
         </activity>
+        <activity
+            android:name="com.example.lifebuttons.DeparturesMenu"
+            android:label="@string/title_activity_departures_menu"
+            android:parentActivityName="com.example.lifebuttons.ScriptsHome" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.lifebuttons.ScriptsHome" />
+        </activity>
     </application>
 
 </manifest>

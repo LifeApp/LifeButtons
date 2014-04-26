@@ -19,6 +19,10 @@
     <string name="family">Family</string>
     <string name="friends">Friends</string>
     <string name="new_people">New People</string>
-    <string name="professionals">Professionals</string>    
+    <string name="professionals">Professionals</string>
+    <string name="title_activity_departures_menu">DeparturesMenu</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
 
 </resources>
