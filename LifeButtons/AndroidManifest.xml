@@ -26,6 +26,9 @@
             android:name="com.example.lifebuttons.ScriptsHome"
             android:label="@string/title_activity_scripts_home"
             android:parentActivityName="com.example.lifebuttons.MainMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.lifebuttons.MainMenu" />
         </activity>
         <activity
             android:name="com.example.lifebuttons.GreetingsMenu"

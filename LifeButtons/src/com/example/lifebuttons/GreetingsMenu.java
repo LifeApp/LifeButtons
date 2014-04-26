@@ -2,6 +2,9 @@ package com.example.lifebuttons;
 
 import java.util.Locale;
 
+import android.app.ActionBar;
+import android.app.FragmentTransaction;
+import android.app.ActionBar.Tab;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -15,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class GreetingsMenu extends FragmentActivity {
@@ -27,7 +31,7 @@ public class GreetingsMenu extends FragmentActivity {
 	 * intensive, it may be best to switch to a
 	 * {@link android.support.v4.app.FragmentStatePagerAdapter}.
 	 */
-	SectionsPagerAdapter mSectionsPagerAdapter;
+	CollectionPagerAdapter mCollectionPagerAdapter;
 
 	/**
 	 * The {@link ViewPager} that will host the section contents.
@@ -44,12 +48,24 @@ public class GreetingsMenu extends FragmentActivity {
 
 		// Create the adapter that will return a fragment for each of the three
 		// primary sections of the app.
-		mSectionsPagerAdapter = new SectionsPagerAdapter(
+		mCollectionPagerAdapter = new CollectionPagerAdapter(
 				getSupportFragmentManager());
 
+		
 		// Set up the ViewPager with the sections adapter.
 		mViewPager = (ViewPager) findViewById(R.id.pager);
-		mViewPager.setAdapter(mSectionsPagerAdapter);
+		mViewPager.setAdapter(mCollectionPagerAdapter);
+		
+	    /*mViewPager.setOnPageChangeListener(
+	            new ViewPager.SimpleOnPageChangeListener() {
+	                @Override
+	                public void onPageSelected(int position) {
+	                    // When swiping between pages, select the
+	                    // corresponding tab.
+	                    getActionBar().setSelectedNavigationItem(position);
+	                }
+	            });
+	            */
 
 	}
 
@@ -81,11 +97,12 @@ public class GreetingsMenu extends FragmentActivity {
 	 * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
 	 * one of the sections/tabs/pages.
 	 */
-	public class SectionsPagerAdapter extends FragmentPagerAdapter {
-
-		public SectionsPagerAdapter(FragmentManager fm) {
+	public class CollectionPagerAdapter extends FragmentPagerAdapter {
+		
+		public CollectionPagerAdapter(FragmentManager fm) {
 			super(fm);
 		}
+
 
 		@Override
 		public Fragment getItem(int position) {
@@ -94,7 +111,7 @@ public class GreetingsMenu extends FragmentActivity {
 			// below) with the page number as its lone argument.
 			Fragment fragment = new DummySectionFragment();
 			Bundle args = new Bundle();
-			args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
+			args.putInt(DummySectionFragment.ARG_OBJECT, position);
 			fragment.setArguments(args);
 			return fragment;
 		}
@@ -131,7 +148,7 @@ public class GreetingsMenu extends FragmentActivity {
 		 * The fragment argument representing the section number for this
 		 * fragment.
 		 */
-		public static final String ARG_SECTION_NUMBER = "section_number";
+		public static final String ARG_OBJECT = "object";
 
 		public DummySectionFragment() {
 		}
@@ -139,12 +156,28 @@ public class GreetingsMenu extends FragmentActivity {
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
+			Bundle args = getArguments();
+			int position = args.getInt(ARG_OBJECT);
+			
+			int tabs = 0;
+			switch(position)
+			{
+			case 0:
+				tabs = R.layout.frag_greetings_family;
+				break;
+			case 1:
+				tabs = R.layout.frag_greetings_friends;
+				break;
+			case 2:
+				tabs = R.layout.frag_greetings_professionals;
+				break;
+			case 3:
+				tabs = R.layout.frag_greetings_new_people;
+				break;
+			}
 			View rootView = inflater.inflate(
-					R.layout.fragment_greetings_menu_dummy, container, false);
-			TextView dummyTextView = (TextView) rootView
-					.findViewById(R.id.section_label);
-			dummyTextView.setText(Integer.toString(getArguments().getInt(
-					ARG_SECTION_NUMBER)));
+					tabs, container, false);
+
 			return rootView;
 		}
 	}
