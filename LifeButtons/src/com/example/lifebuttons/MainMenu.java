@@ -23,6 +23,9 @@ public class MainMenu extends Activity implements OnClickListener {
 		
 		Button relationshipMaintenance = (Button) findViewById(R.id.relationship_maint_button);
 		relationshipMaintenance.setOnClickListener(this);
+		
+		Button hygiene = (Button) findViewById(R.id.hygiene_button);
+		hygiene.setOnClickListener(this);
 				
 	}
 
@@ -49,6 +52,10 @@ public class MainMenu extends Activity implements OnClickListener {
 		case R.id.relationship_maint_button:
 			Intent goToRelationshipMaint = new Intent(this,RelationshipMaintenance.class);
 			startActivity(goToRelationshipMaint);
+			break;
+		case R.id.hygiene_button:
+			Intent goToHygiene = new Intent(this,HygieneMenu.class);
+			startActivity(goToHygiene);
 			break;
 		default:
 			Intent goToScriptsTwo = new Intent(this,ScriptsHome.class);

@@ -62,12 +62,15 @@ public class ScriptsHome extends Activity implements OnClickListener {
 		case R.id.greetings_button:
 			Intent goToGreetingsHome = new Intent(this,GreetingsMenu.class);
 			startActivity(goToGreetingsHome);
+			break;
 		case R.id.departures_button:
 			Intent goToDeparturesHome = new Intent(this,DeparturesMenu.class);
-			startActivity(goToDeparturesHome);	
+			startActivity(goToDeparturesHome);
+			break;
 		case R.id.disagreements_button:
 			Intent goToDisagreementsHome = new Intent(this,DisagreementsMenu.class);
 			startActivity(goToDisagreementsHome);	
+			break;
 		
 		}
 	

@@ -30,5 +30,10 @@
     <string name="title_activity_relationship_maintenance">RelationshipMaintenance</string>
     <string name="spider_map">Spider Map</string>
     <string name="social_rating">Social Rating</string>
+    <string name="title_activity_hygiene_menu">HygieneMenu</string>
+    <string name="sample_hygiene">Sample Hygiene List</string>
+    <string name="male_hygiene">Male Hygiene List</string>
+    <string name="female_hygiene">Female Hygiene List</string>
+    <string name="my_hygiene_list">My Hygiene List</string>    
 
 </resources>
