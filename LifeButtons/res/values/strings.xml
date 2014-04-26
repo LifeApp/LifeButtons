@@ -21,9 +21,11 @@
     <string name="new_people">New People</string>
     <string name="professionals">Professionals</string>
     <string name="title_activity_departures_menu">DeparturesMenu</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
+    <string name="daily_cal">Daily Calendar</string>
+    <string name="weekly_cal">Weekly Calendar</string>
+    <string name="monthly_cal">Montly Calendar</string>
+    <string name="sem_cal">Semester Calendar</string>
     <string name="title_activity_disagreements_menu">DisagreementsMenu</string>
+    <string name="title_activity_time_management">TimeManagement</string>
 
 </resources>
