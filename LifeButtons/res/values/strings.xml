@@ -50,6 +50,25 @@
     <string name="emergency_doctors"   >Doctors</string>
     <string name="emergency_dentists"  >Dentists</string>
     <string name="emergency_therapists">Therapists</string>
-    <string name="emergency_counselors">Counselors</string>    
-
+    <string name="emergency_counselors">Counselors</string>
+    <string name="testing_string">Hello Representative/Senator __________________,\n\nMy name is ____________, and I live in ___________________, Connecticut. I am contacting you because I am very concerned for the future of my son/daughter/family member/friend.\nMy son/daughter/family member/friend {insert name here} has an autism spectrum disorder.\nConnecticut does not provide services for adults who have Autism Spectrum Disorders but do not have mental retardation and _____________ {insert name} will be 21 in ____ number of years/ is ___ years old and receives no services. I am writing to you about Bill No {reference bill number} which would {state what bill would do} and I urge you to support it. ______ {insert name} can live and work in the community as a productive member of society but not without the appropriate supports. This bill will allow for _______ {insert name} to access these supports and live up to his/her fullest potential.\nYou can reach me at _________ {insert telephone number} or _________ {insert e-mail address}. I look forward to discussing this important issue with you at your earliest convenience.\nThank you again for your time.\n\n\n\n\n\n\n\n\n\n\nVery truly yours,_______</string>    
+	<string name="testing_string_two">"Table of Contents\n
+\u2022Chapter 1 Why Doesnt He Talk to Us?\n
+\t\u2022Chapter 2 What Are Scripts? What Is Script Fading?\n
+\u2022Chapter 3 Scripts, Script Fading, and Activity Schedules\n
+\t\u2022Chapter 4 Building Prerequisite Skills: Scripts for Children Who Do Not Yet Talk Why Use Scripts with Nonverbal Children? Making Social Interaction Fun Pairing Pictures, Words, and Objects or Activities Creating Helpful Language Environments Not All Activities Are Social\n
+\u2022Chapter 5 Preparing to Teach Observe Preferences Select Scripts Record the Scripts Enlist the Help of Two Adults Construct an Activity Schedule\n
+\t\u2022Chapter 6 Teaching Children to Use Scripts: Prompters and Conversation Partners How to Be an Effective Prompter Fading Prompts How to Be a Good Conversation Partner Dealing with Errors Measuring Progress What's Next?\n
+\u2022Chapter 7 Scripts for Children Who Say Words or Phrases Initiating Conversation with a Word or Phrase An Additional Measure of Progress What If a Child Doesn't Say the Scripts? Fading Audiotaped Scripts\n
+\t\u2022Chapter 8 Measuring Scripted and Unscripted Interaction New Definitions of Interaction Observing, Scoring, and Graphing Scripted and Unscripted Interaction The Importance of Two Observers\n
+\u2022Chapter 9 More Scripts and More Interaction Opportunities Talking about Reward Activities Talking about Play Activities Talking about Home-Living Activities Extending Conversation When Are Scripts Faded?\n
+\t\u2022Chapter 10 Scripts for Beginning Readers Fading Pictures and Audiotapes Talk Books What to Do When Conversation Fails\n
+\u2022Chapter 11 Scripts for More Accomplished Readers Scripts about Past and Future Activities Photo Albums and Scrapbooks Using the Telephone More about Fading Written Scripts Don't Forget Rewards!\n
+\t\u2022Chapter 12 Measuring More Complex Conversation Defining Interaction Types of Interaction\n
+\u2022Chapter 13 Using Scripts to Promote Peer Interaction Peer Tutoring Interaction with Siblings Peer Interaction in Groups\n
+\u2022Chapter 14 Teaching Young People to Create Their Own Scripts Using Topic Lists Writing Own Scripts\n
+\u2022Chapter 15 Scripts for Nonreaders and People with Severe Disabilities Silent Partners Pictures as Cues for Conversation\n
+\u2022Chapter 16 Making It Work Selecting Scripts Modeling Conversation Fading Prompts Programming Generalized Interaction Skills\n
+\u2022Chapter 17 Solving Problems"</string>
+    
 </resources>

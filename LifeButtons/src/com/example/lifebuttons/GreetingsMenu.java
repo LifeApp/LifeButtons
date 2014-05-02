@@ -175,12 +175,11 @@ public class GreetingsMenu extends FragmentActivity {
 			case 3:
 				tabs = R.layout.frag_greetings_new_people;
 				break;
-			}
+			}			
 			View rootView = inflater.inflate(
-					tabs, container, false);
+					tabs, container, false);			
 
 			return rootView;
 		}
 	}
-
 }
